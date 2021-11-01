@@ -1,4 +1,4 @@
-let arr = [2, 32, 4,-5, 18, 7];
+let arr = [2, 32, 4, -5, 18, 7];
 let x = arr[0];
 let arrLen = arr.length;
 
@@ -10,4 +10,4 @@ for (let i = 0; i < arrLen; i++) {
 
 }
 
-console . log (x) 
+console.log(x)
