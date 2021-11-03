@@ -1,8 +1,6 @@
-
-
+let arrrrrrrr = 8;
 
 for (let i = 0; i < 5; i = i + 1) {
-    let arrrrrrrr = 8;
     let kek = i;
 
     if(kek > 2) {
