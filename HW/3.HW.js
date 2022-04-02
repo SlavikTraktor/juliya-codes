@@ -1,24 +1,17 @@
-let arr = [-1, -24, 316, 3, -11, 36, 7, 8, 11, 29, 3, 14, 123, 5, 6, 23];
-
-let arr2 = [];
-let MAX = 7;
-
+let arr = [-1, -24, 316, 3, -11, 36, 7, 8, 11, 29, 3, 14, 123, 5, 6, 23, 4];
+let MAX = 3;
 for (let i = 0; i < arr.length; i += MAX) {
-  let triple = [];
-  for (let j = 0; j < MAX; j++) {
-    if (arr[i + j]) {
-      triple.push(arr[i + j]);
-    }
-  }
-  arr2.push(triple);
+  let triple = arr.slice(i, i + MAX);
+  triple = (i / MAX) % 2 === 0 ? triple : triple.reverse();
+  triple = triple.reduce((acc, v) => acc + v + " ", "");
+  console.log(triple);
 }
-console.log(arr2);
 
-arr2.forEach((v, i) => {
-  let arrInner = i % 2 === 1 ? v.reverse() : v;
-  let res = arrInner.reduce((acc, v) => acc + v + " ", "");
-  console.log(res);
-});
+// arr2.forEach((v, i) => {
+//   let arrInner = i % 2 === 1 ? v.reverse() : v;
+//   let res = arrInner.reduce((acc, v) => acc + v + " ", "");
+//   console.log(res);
+// });
 
 // -1 -24 316
 // 36 -11 3
